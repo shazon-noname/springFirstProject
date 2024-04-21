@@ -1,5 +1,8 @@
 package org.example;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ClassicalMusic implements Music{
 
     private ClassicalMusic () {
@@ -9,13 +12,7 @@ public class ClassicalMusic implements Music{
         return new ClassicalMusic();
     }
 
-    public void initMethod() {
-        System.out.println("init method");
-    }
 
-    public void destroyMethod() {
-        System.out.println("destroy method");
-    }
 
     @Override
     public String getSong() {
