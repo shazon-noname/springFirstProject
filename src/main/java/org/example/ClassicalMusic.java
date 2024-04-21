@@ -2,9 +2,11 @@ package org.example;
 
 public class ClassicalMusic implements Music{
 
-    @Override
-    public String getSong() {
-        return "ClassicalSong";
+    private ClassicalMusic () {
+
+    }
+    public static ClassicalMusic getClassicalMusic() {
+        return new ClassicalMusic();
     }
 
     public void initMethod() {
@@ -13,5 +15,10 @@ public class ClassicalMusic implements Music{
 
     public void destroyMethod() {
         System.out.println("destroy method");
+    }
+
+    @Override
+    public String getSong() {
+        return "ClassicalSong";
     }
 }
