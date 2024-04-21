@@ -4,6 +4,14 @@ public class ClassicalMusic implements Music{
 
     @Override
     public String getSong() {
-        return "Hungarian Rhapsody";
+        return "ClassicalSong";
+    }
+
+    public void initMethod() {
+        System.out.println("init method");
+    }
+
+    public void destroyMethod() {
+        System.out.println("destroy method");
     }
 }
