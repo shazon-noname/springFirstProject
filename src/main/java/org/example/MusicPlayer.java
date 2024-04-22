@@ -1,12 +1,26 @@
 package org.example;
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
 @Component
 public class MusicPlayer {
+    @Value("${musicPlayer.name}")
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public String getVolume() {
+        return volume;
+    }
+
+    @Value("${musicPlayer.volume}")
+    private String volume;
     private Music rockMusic;
     private Music classicalMusic;
 
