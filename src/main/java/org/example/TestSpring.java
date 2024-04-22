@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.genres.ClassicalMusic;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class TestSpring {
@@ -10,13 +11,8 @@ public class TestSpring {
 
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 
-        System.out.println(musicPlayer.getName());
-        System.out.println(musicPlayer.getVolume());
+        System.out.println(musicPlayer.playMusic());
 
-        ClassicalMusic classicalMusic = context.getBean("classicalMusic", ClassicalMusic.class);
-        ClassicalMusic classicalMusic1 = context.getBean("classicalMusic", ClassicalMusic.class);
-
-        System.out.println(classicalMusic1 == classicalMusic);
 
         context.close();
     }
