@@ -1,6 +1,7 @@
 package org.example;
 
-public interface Music {
-    String getSong();
+import java.util.List;
 
+public interface Music {
+    List<String> getSong();
 }
